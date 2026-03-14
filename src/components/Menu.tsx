@@ -226,30 +226,37 @@ export default function Menu() {
                 key={i}
                 className="border-b border-cream/10 py-6 last:border-b-0"
               >
-                <div className="flex justify-between items-start gap-4">
-                  <div className="flex-1">
+                <div>
+                  <div className="flex justify-between items-start gap-4">
                     <h3 className="text-cream font-bold text-lg uppercase tracking-wide">
                       {name}
                     </h3>
-                    {desc && (
-                      <p className="text-cream/50 text-sm mt-1">{desc}</p>
+                    {item.prices.length === 1 && (
+                      <span className="text-flame font-bold text-lg shrink-0">
+                        {item.prices[0].price === "TBA" ? "TBA" : `CHF ${item.prices[0].price}`}
+                      </span>
                     )}
                   </div>
-                  <div className="flex flex-wrap gap-3 items-start shrink-0">
-                    {item.prices.map((p, j) => {
-                      const label = t(p.label, locale);
-                      return (
-                        <div key={j} className="text-right">
-                          {label && (
-                            <span className="text-cream/40 text-xs uppercase block">{label}</span>
-                          )}
-                          <span className="text-flame font-bold text-lg">
-                            {p.price === "TBA" ? "TBA" : `CHF ${p.price}`}
+                  {desc && (
+                    <p className="text-cream/50 text-sm mt-1">{desc}</p>
+                  )}
+                  {item.prices.length > 1 && (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2">
+                      {item.prices.map((p, j) => {
+                        const label = t(p.label, locale);
+                        return (
+                          <span key={j} className="text-sm">
+                            {label && (
+                              <span className="text-cream/40 text-xs uppercase">{label} </span>
+                            )}
+                            <span className="text-flame font-bold">
+                              CHF {p.price}
+                            </span>
                           </span>
-                        </div>
-                      );
-                    })}
-                  </div>
+                        );
+                      })}
+                    </div>
+                  )}
                 </div>
               </div>
             );

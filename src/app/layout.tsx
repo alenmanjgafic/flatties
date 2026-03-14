@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     description: "Bold flavours. Fast service. St. Gallen.",
     type: "website",
   },
+  other: {
+    "apple-mobile-web-app-capable": "yes",
+    "apple-mobile-web-app-status-bar-style": "black-translucent",
+    "theme-color": "#212121",
+  },
 };
 
 export default function RootLayout({
