@@ -16,8 +16,8 @@ export const translations = {
     title2: { en: "Burgers", de: "Burgers" },
     title3: { en: "Done Right.", de: "Done Right." },
     description: {
-      en: "Bold flavours, fast service and the best burger experience in town. From lunch rush to late-night cravings.",
-      de: "Bold Flavours, schneller Service und die beste Burger-Experience der Stadt. Von Lunch Rush bis Late-Night Cravings.",
+      en: "Bold flavours, fast service and the best burger experience in town. From lunch rush to after-work cravings.",
+      de: "Bold Flavours, schneller Service und die beste Burger-Experience der Stadt. Vom Lunch Rush bis zum Feierabend-Craving.",
     },
     ctaMenu: { en: "Check the Menu", de: "Zum Menü" },
     ctaLocation: { en: "Find Us", de: "Standort" },
@@ -27,20 +27,24 @@ export const translations = {
     title1: { en: "More Than", de: "Mehr Als" },
     title2: { en: "Just A Burger.", de: "Nur Ein Burger." },
     p1: {
-      en: "Flatties was born because we spotted a gap in the street food scene: plenty of burger stands, but almost none with a real brand experience.",
-      de: "Flatties wurde geboren, weil wir eine Lücke in der Street Food Szene gesehen haben: Genug Burger-Stände, aber kaum einer mit einer echten Brand Experience.",
+      en: "Flatties isn't about simply selling burgers — we want to show how a real smashburger should taste.",
+      de: "Bei Flatties geht es nicht darum, einfach Burger zu verkaufen – wir wollen zeigen, wie ein echter Smashburger schmecken sollte.",
     },
     p2: {
-      en: "We wanted to create something premium, bold and instantly recognisable — a concept that looks as good on Instagram as it tastes.",
-      de: "Wir wollten etwas Premium, Bold und sofort Wiedererkennbares schaffen — ein Konzept, das auf Instagram genauso gut aussieht, wie es schmeckt.",
+      en: "That's why we rely on selected premium ingredients, regional partners, original Martin's Potato Rolls from the USA, Angus beef refined with premium Wagyu fat and house-selected sauces.",
+      de: "Deshalb setzen wir auf ausgewählte Premium-Zutaten, regionale Partner, originale Martin's Potato Rolls aus den USA, Angus-Rind mit hochwertigem Wagyu-Fett und hausselektierte Saucen.",
+    },
+    p3full: {
+      en: "Every burger is smashed fresh and prepared only after you order, so taste and quality take centre stage without compromise. We question every detail, keep refining our products and pursue a single goal: creating the best possible burger experience — bite by bite.",
+      de: "Jeder Burger wird frisch gesmasht und erst nach Bestellung zubereitet, damit Geschmack und Qualität kompromisslos im Mittelpunkt stehen. Wir hinterfragen jedes Detail, entwickeln unsere Produkte kontinuierlich weiter und verfolgen nur ein Ziel: das bestmögliche Burger-Erlebnis zu schaffen – Bissen für Bissen.",
     },
     p3pre: {
       en: "Our smashed patties come from ",
       de: "Unsere Smashed Patties kommen von der ",
     },
     p3hinterhof: {
-      en: " — 100% Swiss beef, fully traceable and without compromise. Paired with the legendary ",
-      de: " — 100% Schweizer Rind, rückverfolgbar und ohne Kompromisse. Dazu die legendären ",
+      en: " — Angus beef refined with Wagyu fat, fully traceable and without compromise. Paired with the legendary ",
+      de: " — Angus-Rind, veredelt mit Wagyu-Fett, rückverfolgbar und ohne Kompromisse. Dazu die legendären ",
     },
     p3potatorolls: {
       en: " and fresh drinks by ",
@@ -50,22 +54,70 @@ export const translations = {
       en: ". No shortcuts, only the finest ingredients.",
       de: ". Keine Abkürzungen, nur die besten Zutaten.",
     },
+    quality: {
+      tagline: {
+        en: "The Difference Is in the Details",
+        de: "Der Unterschied liegt im Detail",
+      },
+      title: {
+        en: "Quality You Can Taste",
+        de: "Qualität, die man schmeckt",
+      },
+      originTitle: {
+        en: "100% Traceable Origin",
+        de: "100% Nachvollziehbare Herkunft",
+      },
+      originText: {
+        en: "Local Swiss meat from Hinterhofmetzger in Staad — selected quality, transparent origin and responsible processing.",
+        de: "Fleisch lokal aus der Schweiz vom Hinterhofmetzger aus Staad — ausgewählte Qualität, transparente Herkunft und verantwortungsvolle Verarbeitung.",
+      },
+      beefTitle: { en: "Better Beef", de: "Besseres Fleisch" },
+      beefText: {
+        en: "Selected Angus beef, refined with premium Wagyu fat — for maximum juiciness, intense flavour and perfect texture.",
+        de: "Ausgewähltes Angus-Rind, veredelt mit hochwertigem Wagyu-Fett — für maximale Saftigkeit, intensiven Geschmack und perfekte Textur.",
+      },
+      promiseTitle: { en: "No Compromises", de: "Keine Kompromisse" },
+      promise1: { en: "No antibiotics", de: "Keine Antibiotika" },
+      promise2: { en: "No factory farming", de: "Keine Massentierhaltung" },
+      promise3: {
+        en: "No growth promoters",
+        de: "Keine Wachstumsförderer",
+      },
+      bunsTitle: { en: "Original Martin's Buns", de: "Original Martin's Buns" },
+      bunsText: {
+        en: "Original Martin's Potato Buns — imported directly from the USA. Soft, slightly sweet and unmatched in taste.",
+        de: "Original Martin's Potato Buns — direkt aus den USA importiert. Weich, leicht süsslich und unvergleichlich im Geschmack.",
+      },
+      saucesTitle: { en: "Premium Sauces", de: "Premium Sauces" },
+      saucesText: {
+        en: "A curated selection of premium sauces — partly vegan, developed for maximum flavour.",
+        de: "Eine kuratierte Auswahl an hochwertigen Premium-Saucen — teilweise vegan, entwickelt für maximalen Geschmack.",
+      },
+      drinksTitle: { en: "All You Can Drink", de: "All You Can Drink" },
+      drinksText: {
+        en: "Pay once — refill as much as you want. Mix it your way with lots of flavours, ice-cold & fresh from the Swiss Grapos system. No wait, just pour & go.",
+        de: "Einmal zahlen — refill as much as you want. Mix it your way mit vielen Flavours, eiskalt & frisch aus dem Schweizer Grapos-System. No wait — einfach zapfen & go.",
+      },
+    },
   },
   menu: {
     tagline: { en: "What We Serve", de: "Unser Angebot" },
     title: { en: "The Menu", de: "Das Menü" },
     boxInfo: {
-      en: "Box = Burger + Fries + Sauce of Choice",
-      de: "Box = Burger + Fries + Sauce nach Wahl",
+      en: "Menü = Burger + Classic Fries incl. Sauce + Soft Drink",
+      de: "Menü = Burger + Klassische Pommes inkl. Sosse + Softdrink",
     },
     categories: {
-      burgers: { en: "Burgers", de: "Burgers" },
-      sides: { en: "Sides", de: "Sides" },
+      menus: { en: "Menüs", de: "Menüs" },
+      burgers: { en: "Smashburger", de: "Smashburger" },
+      sides: { en: "Sides", de: "Beilagen" },
       extras: { en: "Extras", de: "Extras" },
-      sauces: { en: "Dips & Sauces", de: "Dips & Saucen" },
-      drinks: { en: "Drinks", de: "Drinks" },
+      sauces: { en: "Dips & Sauces", de: "Dips & Sossen" },
+      drinks: { en: "Drinks", de: "Getränke" },
       sweets: { en: "Sweets", de: "Sweets" },
     },
+    popular: { en: "Popular", de: "Beliebt" },
+    spicy: { en: "Hot", de: "Scharf" },
   },
   location: {
     tagline: { en: "Find Us", de: "Standort" },
@@ -74,10 +126,52 @@ export const translations = {
     address: { en: "Address", de: "Adresse" },
     country: { en: "Switzerland", de: "Schweiz" },
     hours: { en: "Opening Hours", de: "Öffnungszeiten" },
+    openDaily: {
+      en: "Open daily — 11:00 to 20:00",
+      de: "Täglich geöffnet — 11:00 bis 20:00 Uhr",
+    },
+    daily: { en: "Daily", de: "Täglich" },
     contact: { en: "Contact", de: "Kontakt" },
   },
   footer: {
     rights: { en: "All rights reserved.", de: "Alle Rechte vorbehalten." },
+  },
+  reviews: {
+    tagline: { en: "Google Reviews", de: "Google Rezensionen" },
+    title: { en: "What Guests Say", de: "Das Sagen Gäste" },
+    onGoogle: { en: "reviews on Google", de: "Rezensionen auf Google" },
+    cta: { en: "Read all reviews", de: "Alle Rezensionen lesen" },
+  },
+  contact: {
+    navLabel: { en: "Contact", de: "Kontakt" },
+    tagline: { en: "Get in Touch", de: "Sag Hallo" },
+    title1: { en: "Work", de: "Mach Was" },
+    title2: { en: "With Us.", de: "Mit Uns." },
+    intro: {
+      en: "Cooperation, franchise, influencer or UGC inquiries — drop us a line and we'll get back to you as fast as possible.",
+      de: "Kooperations-, Franchise-, Influencer- oder UGC-Anfragen — schreib uns und wir melden uns so schnell wie möglich.",
+    },
+    orEmail: { en: "Or email us directly:", de: "Oder schreib uns direkt:" },
+    name: { en: "Name", de: "Name" },
+    email: { en: "Email", de: "E-Mail" },
+    type: { en: "What's it about?", de: "Worum geht's?" },
+    typeKoop: { en: "Cooperation / Franchise", de: "Kooperation / Franchise" },
+    typeInfluencer: { en: "Influencer / UGC", de: "Influencer / UGC" },
+    typeOther: { en: "Other", de: "Sonstiges" },
+    message: { en: "Your message", de: "Deine Nachricht" },
+    submit: { en: "Send Inquiry", de: "Anfrage Senden" },
+    sending: { en: "Sending…", de: "Wird gesendet…" },
+    error: {
+      en: "Something went wrong — please try again.",
+      de: "Etwas ist schiefgelaufen — bitte versuch es nochmal.",
+    },
+    thanksTag: { en: "Inquiry sent", de: "Anfrage gesendet" },
+    thanksTitle: { en: "Thanks!", de: "Danke!" },
+    thanksText: {
+      en: "We received your inquiry and will get back to you as fast as possible.",
+      de: "Wir haben deine Anfrage erhalten und antworten so schnell wie möglich.",
+    },
+    backHome: { en: "Back to Home", de: "Zurück zur Startseite" },
   },
 } as const;
 

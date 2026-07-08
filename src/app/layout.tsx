@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
-import { Comfortaa } from "next/font/google";
+import { Comfortaa, Anton, Titan_One } from "next/font/google";
 import { LanguageProvider } from "@/context/LanguageContext";
 import "./globals.css";
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
   variable: "--font-body",
+  display: "swap",
+});
+
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const titanOne = Titan_One({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bubble",
   display: "swap",
 });
 
@@ -32,7 +46,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={comfortaa.variable}>
+    <html
+      lang="en"
+      className={`${comfortaa.variable} ${anton.variable} ${titanOne.variable}`}
+    >
       <body className="antialiased">
         <LanguageProvider>{children}</LanguageProvider>
       </body>

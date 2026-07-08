@@ -40,3 +40,45 @@ body {
 section {
   scroll-margin-top: 80px;
 }
+
+/* Display + bubble type */
+.font-display {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
+}
+.font-bubble {
+  font-family: var(--font-bubble), sans-serif;
+}
+
+/* Neon-sign flicker (Öffnungszeiten-Hinweis) */
+@keyframes v4-flicker {
+  0%, 89%, 100% { opacity: 1; }
+  90% { opacity: 0.4; }
+  91% { opacity: 1; }
+  93% { opacity: 0.65; }
+  94% { opacity: 1; }
+}
+.v4-flicker {
+  animation: v4-flicker 5s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .v4-flicker {
+    animation: none;
+  }
+}
+
+/* V4 poster edition: hard offset "print" shadows */
+.v4-sticker-shadow-asphalt {
+  box-shadow: 10px 10px 0 0 var(--color-asphalt);
+}
+.v4-sticker-shadow-flame {
+  box-shadow: 10px 10px 0 0 var(--color-flame);
+}
+.v4-sticker-shadow-cream {
+  box-shadow: 10px 10px 0 0 var(--color-cream);
+}
+
+/* V4: halftone dot texture (uses currentColor) */
+.v4-dots {
+  background-image: radial-gradient(currentColor 1.5px, transparent 1.5px);
+  background-size: 22px 22px;
+}

@@ -38,3 +38,9 @@ Flatties Brand Design/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# order click log (lokale Statistik)
+/data/
+
+# lokale Tooling-Konfiguration
+/.claude/
