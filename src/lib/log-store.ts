@@ -3,13 +3,17 @@ import path from "path";
 
 // JSONL-Logs (Bestell-Klicks, Anfragen) mit zwei Speicher-Backends:
 // - Lokal / eigener Server: Datei unter data/ (wie bisher)
-// - Vercel (read-only Dateisystem): Vercel Blob, sobald
-//   BLOB_READ_WRITE_TOKEN gesetzt ist (Storage → Blob im Vercel-Dashboard)
+// - Vercel (read-only Dateisystem): Vercel Blob. Neue Stores verbinden sich
+//   über BLOB_STORE_ID + OIDC-Laufzeit-Token, klassische über
+//   BLOB_READ_WRITE_TOKEN — das SDK wählt selbst, wir prüfen nur, ob
+//   überhaupt ein Store verbunden ist.
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
 function blobEnabled(): boolean {
-  return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+  return Boolean(
+    process.env.BLOB_READ_WRITE_TOKEN || process.env.BLOB_STORE_ID
+  );
 }
 
 export async function readLog(name: string): Promise<string> {
