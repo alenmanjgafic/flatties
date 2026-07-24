@@ -7,6 +7,8 @@ import path from "path";
 //   über BLOB_STORE_ID + OIDC-Laufzeit-Token, klassische über
 //   BLOB_READ_WRITE_TOKEN — das SDK wählt selbst, wir prüfen nur, ob
 //   überhaupt ein Store verbunden ist.
+//   Der Store ist privat (Default neuer Stores): Logs sind nicht über eine
+//   öffentliche URL erreichbar, gelesen wird über get() mit Auth.
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -18,12 +20,13 @@ function blobEnabled(): boolean {
 
 export async function readLog(name: string): Promise<string> {
   if (blobEnabled()) {
-    const { list } = await import("@vercel/blob");
-    const { blobs } = await list({ prefix: `logs/${name}` });
-    const blob = blobs.find((b) => b.pathname === `logs/${name}`);
-    if (!blob) return "";
-    const res = await fetch(blob.url, { cache: "no-store" });
-    return res.ok ? res.text() : "";
+    const { get } = await import("@vercel/blob");
+    const result = await get(`logs/${name}`, {
+      access: "private",
+      useCache: false,
+    });
+    if (!result?.stream) return "";
+    return new Response(result.stream).text();
   }
 
   try {
@@ -44,7 +47,7 @@ export async function appendLog(name: string, entry: object): Promise<boolean> {
     const { put } = await import("@vercel/blob");
     const existing = await readLog(name);
     await put(`logs/${name}`, existing + line, {
-      access: "public",
+      access: "private",
       addRandomSuffix: false,
       allowOverwrite: true,
       contentType: "application/jsonl",
