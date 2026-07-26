@@ -38,7 +38,10 @@ export default function RotatingBadgeV4({
               d="M 60,60 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"
             />
           </defs>
-          <text className={`${ringClassName} font-bold uppercase`} fontSize="12.5" letterSpacing="2.5">
+          {/* letterSpacing so gewählt, dass "Flatties St. Gallen ·" zweimal
+              vollständig auf den Kreisumfang passt (bei 2.5 wurde das Ende
+              abgeschnitten). */}
+          <text className={`${ringClassName} font-bold uppercase`} fontSize="12.5" letterSpacing="1.9">
             <textPath href="#v4-badge-circle">{text}</textPath>
           </text>
         </motion.svg>
