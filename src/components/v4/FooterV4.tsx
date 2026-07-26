@@ -26,11 +26,14 @@ export default function FooterV4({ homePath = "/" }: FooterV4Props) {
       <div className="max-w-6xl mx-auto px-6">
         {/* Giant CI wordmark, per-letter reveal, flame on hover */}
         <p aria-label="Flatties" className="group">
+          {/* Deckkraft liegt auf dem Wrapper, nicht auf den Slices: Die
+              Slices überlappen minimal (Seam-Fix) — halbtransparente Farbe
+              würde sich dort doppelt stapeln und fleckig wirken. */}
           <WordmarkV4
             whileInView
             delay={0}
-            className="mx-auto w-full max-w-4xl"
-            sliceClassName="bg-cream/25 transition-colors duration-500 group-hover:bg-flame"
+            className="mx-auto w-full max-w-4xl opacity-25 transition-opacity duration-500 group-hover:opacity-100"
+            sliceClassName="bg-cream transition-colors duration-500 group-hover:bg-flame"
           />
         </p>
 
