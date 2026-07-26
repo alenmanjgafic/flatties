@@ -24,6 +24,7 @@ const titanOne = Titan_One({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://flatties.ch"),
   title: "Flatties — Premium Smashed Burgers | St. Gallen",
   description:
     "Flatties is a premium street food brand in St. Gallen. Bold flavours, fast service and the best smashed burgers in town.",
@@ -32,6 +33,8 @@ export const metadata: Metadata = {
     title: "Flatties — Premium Smashed Burgers",
     description: "Bold flavours. Fast service. St. Gallen.",
     type: "website",
+    url: "https://flatties.ch",
+    siteName: "Flatties",
   },
   other: {
     "apple-mobile-web-app-capable": "yes",

@@ -16,6 +16,11 @@ const LanguageContext = createContext<LanguageContextType>({
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [locale, setLocale] = useState<Locale>("en");
 
+  // <html lang> mit der tatsächlich angezeigten Sprache synchron halten
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
+
   useEffect(() => {
     const stored = localStorage.getItem("flatties-lang") as Locale | null;
     if (stored && (stored === "en" || stored === "de")) {
