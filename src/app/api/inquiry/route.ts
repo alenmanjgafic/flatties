@@ -118,7 +118,7 @@ export async function POST(request: Request) {
     !VALID_TYPES.has(type) ||
     typeof message !== "string" ||
     message.trim().length < 5 ||
-    message.length > 5000
+    message.length > 4000
   ) {
     return NextResponse.json({ error: "invalid input" }, { status: 400 });
   }

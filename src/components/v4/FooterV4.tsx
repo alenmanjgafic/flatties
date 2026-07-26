@@ -11,7 +11,7 @@ type FooterV4Props = {
   homePath?: string;
 };
 
-export default function FooterV4({ homePath = "" }: FooterV4Props) {
+export default function FooterV4({ homePath = "/" }: FooterV4Props) {
   const { locale } = useLocale();
 
   const links = [

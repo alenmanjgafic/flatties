@@ -3,17 +3,25 @@
 import { motion } from "framer-motion";
 
 // Buchstaben-Spalten der Original-Wortmarke (logo-flame.png, 1456px breit),
-// per Alpha-Analyse vermessen: [links%, rechts%] je Buchstabe F L A T T i E S
+// per Alpha-Analyse vermessen: [links%, rechts%] je Buchstabe F L A T T i E S.
+// A/T und T/i kernen ineinander — dort existiert keine tintenfreie Lücke,
+// die Schnittkante läuft zwangsläufig durch den Buchstaben.
 const WORDMARK_SLICES: [number, number][] = [
-  [0, 13.26],
-  [13.26, 25.76],
-  [25.76, 40.59],
+  [0, 13.22],
+  [13.22, 25.72],
+  [25.72, 40.59],
   [40.59, 52.13],
   [52.13, 65.32],
-  [65.32, 73.01],
-  [73.01, 84.89],
-  [84.89, 100],
+  [65.32, 72.97],
+  [72.97, 84.82],
+  [84.82, 100],
 ];
+
+// Benachbarte Slices überlappen minimal: Zwei exakt aneinanderstossende
+// clip-path-Kanten lassen durch ihr Antialiasing eine helle Haarlinie
+// stehen, wo die Kante durch Tinte läuft (sichtbar am ersten T). Mit
+// Überlappung deckt jede Seite die Kante der anderen ab.
+const SLICE_OVERLAP = 0.3;
 
 type WordmarkV4Props = {
   /** Sizing/Positionierung des Wrappers. */
@@ -76,7 +84,7 @@ export default function WordmarkV4({
               maskSize: "100% 100%",
               WebkitMaskRepeat: "no-repeat",
               maskRepeat: "no-repeat",
-              clipPath: `inset(0 ${(100 - right).toFixed(2)}% 0 ${left.toFixed(2)}%)`,
+              clipPath: `inset(0 ${Math.max(0, 100 - right - SLICE_OVERLAP).toFixed(2)}% 0 ${Math.max(0, left - SLICE_OVERLAP).toFixed(2)}%)`,
               transformOrigin: `${((left + right) / 2).toFixed(2)}% 100%`,
             }}
           />

@@ -57,9 +57,7 @@ export default function HeroV4() {
             transition={{ delay: 0.75, type: "spring", stiffness: 90, damping: 16 }}
             className="font-display uppercase text-cream text-2xl sm:text-4xl lg:text-5xl mt-5 tracking-wide"
           >
-            {t(translations.hero.title1, locale)}{" "}
-            {t(translations.hero.title2, locale)} —{" "}
-            {t(translations.hero.title3, locale)}
+            {t(translations.hero.subline, locale)}
           </motion.h2>
 
           <motion.p
@@ -118,22 +116,11 @@ export default function HeroV4() {
 
             {/* Rotating sticker badge */}
             <RotatingBadgeV4
-              text="FLATTIES • SMASHED BURGERS • ST. GALLEN •"
+              text="Flatties St. Gallen · Flatties St. Gallen · "
               className="absolute -top-12 -right-4 sm:-top-16 sm:-right-10 w-28 h-28 sm:w-40 sm:h-40 text-cream"
               ringClassName="fill-cream font-display"
               discClassName="bg-cream border-[3px] border-asphalt"
             />
-
-            {/* Floating price chip */}
-            <motion.div
-              animate={{ y: [0, -10, 0], rotate: [6, 3, 6] }}
-              transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
-              className="absolute -bottom-6 -left-3 sm:-left-8 bg-cream border-[3px] border-asphalt rounded-full px-6 py-3 v4-sticker-shadow-asphalt"
-            >
-              <span className="font-bubble text-asphalt text-sm sm:text-base uppercase">
-                Classic ab CHF 14.90
-              </span>
-            </motion.div>
           </motion.div>
         </motion.div>
       </div>

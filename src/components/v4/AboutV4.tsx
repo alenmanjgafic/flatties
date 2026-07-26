@@ -70,7 +70,7 @@ export default function AboutV4() {
                   />
                 </div>
                 <RotatingBadgeV4
-                  text="GRAB IT AND RUN • BEFORE THE CHEESE DROPS •"
+                  text="Flatties St. Gallen · Flatties St. Gallen · "
                   className="absolute -bottom-10 -left-4 sm:-left-10 w-28 h-28 sm:w-36 sm:h-36 text-flame"
                   ringClassName="fill-flame font-display"
                   discClassName="bg-cream border-[3px] border-flame"
@@ -120,6 +120,7 @@ export default function AboutV4() {
                       translations.about.quality.promise1,
                       translations.about.quality.promise2,
                       translations.about.quality.promise3,
+                      translations.about.quality.promise4,
                     ].map((p) => (
                       <li key={p.en} className="flex items-center gap-2">
                         <svg

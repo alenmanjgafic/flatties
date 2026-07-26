@@ -18,7 +18,7 @@ type NavbarV4Props = {
   homePath?: string;
 };
 
-export default function NavbarV4({ homePath = "" }: NavbarV4Props) {
+export default function NavbarV4({ homePath = "/" }: NavbarV4Props) {
   const [open, setOpen] = useState(false);
   const [orderOpen, setOrderOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -53,7 +53,7 @@ export default function NavbarV4({ homePath = "" }: NavbarV4Props) {
         transition={{ type: "spring", stiffness: 300, damping: 34 }}
       >
         <nav className="max-w-6xl mx-auto bg-cream rounded-full border-[3px] border-asphalt px-4 sm:px-6 py-2.5 flex items-center justify-between shadow-[0_6px_0_0_rgba(33,33,33,0.9)]">
-          <a href="#" className="flex items-center gap-2 cursor-pointer" aria-label="Flatties Home">
+          <a href="/" className="flex items-center gap-2 cursor-pointer" aria-label="Flatties Home">
             <Image
               src="/images/mascot-head.png"
               alt=""

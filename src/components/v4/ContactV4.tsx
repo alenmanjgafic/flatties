@@ -72,15 +72,6 @@ export default function ContactV4() {
           <p className="text-cream/90 text-base sm:text-lg max-w-xl mx-auto mt-6 leading-relaxed">
             {t(translations.contact.intro, locale)}
           </p>
-          <p className="text-cream/90 text-base sm:text-lg mt-3">
-            {t(translations.contact.orEmail, locale)}{" "}
-            <a
-              href="mailto:info@flatties.ch?subject=Anfrage%20Flatties.ch"
-              className="font-bold text-cream underline decoration-2 underline-offset-4 hover:text-asphalt transition-colors duration-200 cursor-pointer"
-            >
-              info@flatties.ch
-            </a>
-          </p>
         </RevealV4>
 
         <RevealV4 delay={0.15}>
@@ -164,7 +155,7 @@ export default function ContactV4() {
                 name="message"
                 required
                 minLength={5}
-                maxLength={5000}
+                maxLength={4000}
                 rows={6}
                 className={`${inputClasses} resize-y`}
               />

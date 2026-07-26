@@ -10,7 +10,7 @@ import FooterV4 from "@/components/v4/FooterV4";
 import { getGoogleReviews } from "@/lib/google-reviews";
 
 const TICKER_TOP = ["Smashed to Order", "100% Swiss Beef", "St. Gallen", "Grab it and Run"];
-const TICKER_BOTTOM = ["Before the Cheese Drops", "Open Daily", "Fresh Buns", "Flatties"];
+const TICKER_BOTTOM = ["Open Daily", "Fresh Buns", "Flatties", "St. Gallen"];
 
 // Seite alle 6h neu bauen, damit frische Google-Rezensionen erscheinen
 export const revalidate = 21600;

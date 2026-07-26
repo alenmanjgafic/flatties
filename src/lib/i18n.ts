@@ -12,12 +12,13 @@ export const translations = {
       en: "Premium Street Food — St. Gallen",
       de: "Premium Street Food — St. Gallen",
     },
-    title1: { en: "Smashed", de: "Smashed" },
-    title2: { en: "Burgers", de: "Burgers" },
-    title3: { en: "Done Right.", de: "Done Right." },
+    subline: {
+      en: "Best Smashburger in Town",
+      de: "Best Smashburger in Town",
+    },
     description: {
-      en: "Bold flavours, fast service and the best burger experience in town. From lunch rush to after-work cravings.",
-      de: "Bold Flavours, schneller Service und die beste Burger-Experience der Stadt. Vom Lunch Rush bis zum Feierabend-Craving.",
+      en: "Selected premium ingredients. Freshly smashed. Unmistakable flavour in every bite.",
+      de: "Ausgewählte Premium-Zutaten. Frisch gesmasht. Unverwechselbarer Geschmack in jedem Bissen.",
     },
     ctaMenu: { en: "Check the Menu", de: "Zum Menü" },
     ctaLocation: { en: "Find Us", de: "Standort" },
@@ -28,15 +29,15 @@ export const translations = {
     title2: { en: "Just A Burger.", de: "Nur Ein Burger." },
     p1: {
       en: "Flatties isn't about simply selling burgers — we want to show how a real smashburger should taste.",
-      de: "Bei Flatties geht es nicht darum, einfach Burger zu verkaufen – wir wollen zeigen, wie ein echter Smashburger schmecken sollte.",
+      de: "Bei Flatties geht es nicht darum, einfach Burger zu verkaufen, wir wollen zeigen, wie ein echter Smashburger schmecken sollte.",
     },
     p2: {
-      en: "That's why we rely on selected premium ingredients, regional partners, original Martin's Potato Rolls from the USA, Angus beef refined with premium Wagyu fat and house-selected sauces.",
-      de: "Deshalb setzen wir auf ausgewählte Premium-Zutaten, regionale Partner, originale Martin's Potato Rolls aus den USA, Angus-Rind mit hochwertigem Wagyu-Fett und hausselektierte Saucen.",
+      en: "That's why we rely on selected premium ingredients, regional partners, original Martin's Potato Rolls from the USA and high-quality Angus beef, refined with Wagyu fat and sourced from our Hinterhofmetzger in Staad. All of it rounded off by carefully selected premium sauces.",
+      de: "Deshalb setzen wir auf ausgewählte Premium-Zutaten, regionale Partner, originale Martin's Potato Rolls aus den USA sowie auf hochwertiges Fleisch aus Angus-Rind, veredelt mit Wagyu-Fett und bezogen von unserem Hinterhofmetzger aus Staad. Ergänzt wird das Ganze durch sorgfältig ausgewählte Premium-Saucen.",
     },
     p3full: {
-      en: "Every burger is smashed fresh and prepared only after you order, so taste and quality take centre stage without compromise. We question every detail, keep refining our products and pursue a single goal: creating the best possible burger experience — bite by bite.",
-      de: "Jeder Burger wird frisch gesmasht und erst nach Bestellung zubereitet, damit Geschmack und Qualität kompromisslos im Mittelpunkt stehen. Wir hinterfragen jedes Detail, entwickeln unsere Produkte kontinuierlich weiter und verfolgen nur ein Ziel: das bestmögliche Burger-Erlebnis zu schaffen – Bissen für Bissen.",
+      en: "Every burger is smashed fresh and prepared only after you order, so taste and quality take centre stage without compromise. We question every detail, keep refining our products and pursue one goal: creating the best possible overall experience — day after day, with consistently high standards of quality.",
+      de: "Jeder Burger wird frisch gesmasht und erst nach deiner Bestellung zubereitet, damit Geschmack und Qualität kompromisslos im Mittelpunkt stehen. Wir hinterfragen jedes Detail, entwickeln unsere Produkte kontinuierlich weiter und verfolgen dabei nur ein Ziel: das bestmögliche Gesamterlebnis zu schaffen und das Tag für Tag mit gleichbleibend höchstem Qualitätsanspruch.",
     },
     p3pre: {
       en: "Our smashed patties come from ",
@@ -82,6 +83,10 @@ export const translations = {
       promise3: {
         en: "No growth promoters",
         de: "Keine Wachstumsförderer",
+      },
+      promise4: {
+        en: "No preservatives",
+        de: "Keine Konservierungsstoffe",
       },
       bunsTitle: { en: "Original Martin's Buns", de: "Original Martin's Buns" },
       bunsText: {
@@ -151,7 +156,6 @@ export const translations = {
       en: "Cooperation, franchise, influencer or UGC inquiries — drop us a line and we'll get back to you as fast as possible.",
       de: "Kooperations-, Franchise-, Influencer- oder UGC-Anfragen — schreib uns und wir melden uns so schnell wie möglich.",
     },
-    orEmail: { en: "Or email us directly:", de: "Oder schreib uns direkt:" },
     name: { en: "Name", de: "Name" },
     email: { en: "Email", de: "E-Mail" },
     type: { en: "What's it about?", de: "Worum geht's?" },

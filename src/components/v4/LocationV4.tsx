@@ -72,14 +72,22 @@ export default function LocationV4() {
                 {
                   title: t(translations.location.contact, locale),
                   body: (
-                    <a
-                      href="https://www.instagram.com/flatties.ch"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-bold text-flame hover:text-flame-dark transition-colors duration-200 cursor-pointer"
-                    >
-                      @flatties.ch
-                    </a>
+                    <p className="flex flex-col gap-1">
+                      <a
+                        href="mailto:info@flatties.ch"
+                        className="font-bold text-flame hover:text-flame-dark transition-colors duration-200 cursor-pointer"
+                      >
+                        info@flatties.ch
+                      </a>
+                      <a
+                        href="https://www.instagram.com/flatties.ch"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-flame hover:text-flame-dark transition-colors duration-200 cursor-pointer"
+                      >
+                        @flatties.ch
+                      </a>
+                    </p>
                   ),
                 },
               ].map((block, i) => (
