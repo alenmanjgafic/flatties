@@ -72,20 +72,12 @@ export default function LocationV4() {
                 {
                   title: t(translations.location.contact, locale),
                   body: (
-                    <p className="flex flex-col gap-1">
+                    <p>
                       <a
                         href="mailto:info@flatties.ch"
                         className="font-bold text-flame hover:text-flame-dark transition-colors duration-200 cursor-pointer"
                       >
                         info@flatties.ch
-                      </a>
-                      <a
-                        href="https://www.instagram.com/flatties.ch"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-bold text-flame hover:text-flame-dark transition-colors duration-200 cursor-pointer"
-                      >
-                        @flatties.ch
                       </a>
                     </p>
                   ),
@@ -109,7 +101,7 @@ export default function LocationV4() {
           <RevealV4 delay={0.15}>
             <div ref={imageRef} className="relative mx-auto w-full max-w-md lg:max-w-none">
               <motion.div style={{ y: imageY }} className="relative">
-                <div className="relative aspect-[4/5] rounded-t-[999px] rounded-b-[2.5rem] overflow-hidden border-[5px] border-asphalt v4-sticker-shadow-asphalt">
+                <div className="relative aspect-[4/5] rounded-t-[999px] rounded-b-[2.5rem] overflow-hidden border-[5px] border-asphalt bg-asphalt v4-sticker-shadow-asphalt">
                   <Image
                     src="/images/packaging.png"
                     alt="Flatties Packaging — Grab &amp; Go"

@@ -67,14 +67,17 @@ section {
 }
 
 /* V4 poster edition: hard offset "print" shadows */
+/* 8px Offset + 2px Spread statt 10px Offset: sichtbar bleiben 10px, aber der
+   Schatten überlappt das Element hinter dessen Kante — ohne Überlappung blitzt
+   an den Rundungen eine Haarlinie Hintergrund zwischen Rahmen und Schatten durch. */
 .v4-sticker-shadow-asphalt {
-  box-shadow: 10px 10px 0 0 var(--color-asphalt);
+  box-shadow: 8px 8px 0 2px var(--color-asphalt);
 }
 .v4-sticker-shadow-flame {
-  box-shadow: 10px 10px 0 0 var(--color-flame);
+  box-shadow: 8px 8px 0 2px var(--color-flame);
 }
 .v4-sticker-shadow-cream {
-  box-shadow: 10px 10px 0 0 var(--color-cream);
+  box-shadow: 8px 8px 0 2px var(--color-cream);
 }
 
 /* V4: halftone dot texture (uses currentColor) */

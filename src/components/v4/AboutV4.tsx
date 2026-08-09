@@ -60,7 +60,7 @@ export default function AboutV4() {
           <RevealV4 delay={0.15}>
             <div ref={imageRef} className="relative mx-auto w-full max-w-md lg:max-w-none">
               <motion.div style={{ y: imageY }} className="relative">
-                <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden border-[5px] border-asphalt v4-sticker-shadow-flame rotate-2">
+                <div className="relative aspect-[3/4] rounded-[2.5rem] overflow-hidden border-[5px] border-asphalt bg-asphalt v4-sticker-shadow-flame rotate-2">
                   <Image
                     src="/images/chef.png"
                     alt="Flatties Chef in der Küche"
@@ -70,7 +70,7 @@ export default function AboutV4() {
                   />
                 </div>
                 <RotatingBadgeV4
-                  text="Flatties St. Gallen · Flatties St. Gallen · "
+                  text="Flatties St. Gallen ·"
                   className="absolute -bottom-10 -left-4 sm:-left-10 w-28 h-28 sm:w-36 sm:h-36 text-flame"
                   ringClassName="fill-flame font-display"
                   discClassName="bg-cream border-[3px] border-flame"

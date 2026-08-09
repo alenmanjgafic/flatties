@@ -103,7 +103,7 @@ export default function HeroV4() {
           className="relative max-w-4xl mx-auto mt-16"
         >
           <motion.div style={{ y: imageY }} className="relative">
-            <div className="relative aspect-[16/9] rounded-[2.5rem] overflow-hidden border-[5px] border-asphalt v4-sticker-shadow-asphalt">
+            <div className="relative aspect-[16/9] rounded-[2.5rem] overflow-hidden border-[5px] border-asphalt bg-asphalt v4-sticker-shadow-asphalt">
               <Image
                 src="/images/hero-burger.png"
                 alt="Flatties Smashed Burger in der Box"
@@ -116,7 +116,7 @@ export default function HeroV4() {
 
             {/* Rotating sticker badge */}
             <RotatingBadgeV4
-              text="Flatties St. Gallen · Flatties St. Gallen · "
+              text="Flatties St. Gallen ·"
               className="absolute -top-12 -right-4 sm:-top-16 sm:-right-10 w-28 h-28 sm:w-40 sm:h-40 text-cream"
               ringClassName="fill-cream font-display"
               discClassName="bg-cream border-[3px] border-asphalt"

@@ -3,24 +3,23 @@
 import { motion } from "framer-motion";
 
 // Buchstaben-Spalten der Original-Wortmarke (logo-flame.png, 1456px breit),
-// per Alpha-Analyse vermessen: [links%, rechts%] je Buchstabe F L A T T i E S.
+// per Alpha-Analyse vermessen: [links%, rechts%] je Gruppe F L AT Ti E S.
 // A/T und T/i kernen ineinander — dort existiert keine tintenfreie Lücke,
-// die Schnittkante läuft zwangsläufig durch den Buchstaben.
+// deshalb animieren diese Paare als ein Slice; sonst risse die Schnittkante
+// den Buchstaben während des Staggers sichtbar auseinander.
 const WORDMARK_SLICES: [number, number][] = [
   [0, 13.22],
   [13.22, 25.72],
-  [25.72, 40.59],
-  [40.59, 52.13],
-  [52.13, 65.32],
-  [65.32, 72.97],
+  [25.72, 52.13],
+  [52.13, 72.97],
   [72.97, 84.82],
   [84.82, 100],
 ];
 
 // Benachbarte Slices überlappen minimal: Zwei exakt aneinanderstossende
-// clip-path-Kanten lassen durch ihr Antialiasing eine helle Haarlinie
-// stehen, wo die Kante durch Tinte läuft (sichtbar am ersten T). Mit
-// Überlappung deckt jede Seite die Kante der anderen ab.
+// clip-path-Kanten können durch ihr Antialiasing eine helle Haarlinie
+// stehen lassen, falls antialiaste Maskenpixel bis an die Kante reichen.
+// Mit Überlappung deckt jede Seite die Kante der anderen ab.
 const SLICE_OVERLAP = 0.3;
 
 type WordmarkV4Props = {
