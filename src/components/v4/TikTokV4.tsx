@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useLocale } from "@/context/LanguageContext";
 import { translations, t } from "@/lib/i18n";
-import { TIKTOK_PROFILE_URL, type TikTokPost } from "@/lib/tiktok";
+import { TIKTOK_PROFILE_URL, type TikTokPost } from "@/lib/tiktok-shared";
 import RevealV4 from "./RevealV4";
 import VelocityTickerV4 from "./VelocityTickerV4";
 

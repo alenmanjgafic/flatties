@@ -40,6 +40,51 @@ export async function readLog(name: string): Promise<string> {
  * Hängt einen Eintrag als JSON-Zeile an das Log an.
  * Gibt true zurück, wenn der Eintrag gespeichert wurde.
  */
+/**
+ * Liest eine kleine Zustandsdatei (z. B. OAuth-Token) — gleiche Backends
+ * wie die Logs: lokal data/, auf Vercel privater Blob.
+ */
+export async function readState(name: string): Promise<string> {
+  if (blobEnabled()) {
+    const { get } = await import("@vercel/blob");
+    const result = await get(`state/${name}`, {
+      access: "private",
+      useCache: false,
+    });
+    if (!result?.stream) return "";
+    return new Response(result.stream).text();
+  }
+
+  try {
+    return await fs.readFile(path.join(DATA_DIR, name), "utf8");
+  } catch {
+    return "";
+  }
+}
+
+/** Überschreibt eine Zustandsdatei vollständig. */
+export async function writeState(name: string, content: string): Promise<boolean> {
+  if (blobEnabled()) {
+    const { put } = await import("@vercel/blob");
+    await put(`state/${name}`, content, {
+      access: "private",
+      addRandomSuffix: false,
+      allowOverwrite: true,
+      contentType: "application/json",
+    });
+    return true;
+  }
+
+  try {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    await fs.writeFile(path.join(DATA_DIR, name), content, "utf8");
+    return true;
+  } catch (err) {
+    console.error("writeState failed:", err);
+    return false;
+  }
+}
+
 export async function appendLog(name: string, entry: object): Promise<boolean> {
   const line = JSON.stringify(entry) + "\n";
 
