@@ -150,9 +150,13 @@ export const translations = {
     cta: { en: "Read all reviews", de: "Alle Rezensionen lesen" },
   },
   social: {
-    tagline: { en: "@flatties.ch on TikTok", de: "@flatties.ch auf TikTok" },
+    tagline: {
+      en: "@flatties.ch on Social Media",
+      de: "@flatties.ch auf Social Media",
+    },
     title: { en: "Fresh from the Feed", de: "Frisch aus dem Feed" },
     cta: { en: "Follow on TikTok", de: "Auf TikTok folgen" },
+    ctaInstagram: { en: "Follow on Instagram", de: "Auf Instagram folgen" },
   },
   contact: {
     navLabel: { en: "Contact", de: "Kontakt" },
