@@ -48,7 +48,8 @@ async function getPostsFromApi(): Promise<TikTokPost[] | null> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ max_count: MAX_POSTS }),
-      cache: "no-store",
+      // Kein cache:"no-store" — siehe tiktok-auth.ts: würde die ISR-Seite
+      // fälschlich dynamisch machen; POST wird von Next nie gecacht.
     }
   );
   if (!res.ok) {

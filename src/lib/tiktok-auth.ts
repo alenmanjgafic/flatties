@@ -63,7 +63,8 @@ async function tokenRequest(
       client_secret: process.env.TIKTOK_CLIENT_SECRET ?? "",
       ...params,
     }),
-    cache: "no-store",
+    // Kein cache:"no-store": POST-Requests cached Next.js ohnehin nie, und
+    // die Markierung würde die statische Startseite (ISR) dynamisch machen.
   });
   const data = (await res.json().catch(() => null)) as TokenResponse | null;
   if (!res.ok || !data?.access_token) {
