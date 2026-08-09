@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useLocale } from "@/context/LanguageContext";
 import { translations, t } from "@/lib/i18n";
@@ -90,11 +91,27 @@ export default function FooterV4({ homePath = "/" }: FooterV4Props) {
             </a>
           </div>
 
-          {/* Copyright */}
-          <p className="text-cream/40 text-xs uppercase tracking-widest border-t border-cream/15 pt-6 w-full text-center">
-            &copy; {new Date().getFullYear()} Flatties.{" "}
-            {t(translations.footer.rights, locale)}
-          </p>
+          {/* Copyright + Rechtliches */}
+          <div className="border-t border-cream/15 pt-6 w-full text-center space-y-3">
+            <p className="text-cream/40 text-xs uppercase tracking-widest">
+              &copy; {new Date().getFullYear()} Flatties.{" "}
+              {t(translations.footer.rights, locale)}
+            </p>
+            <p className="flex justify-center gap-6">
+              <Link
+                href="/impressum"
+                className="text-cream/40 hover:text-flame transition-colors duration-200 text-xs uppercase tracking-widest cursor-pointer"
+              >
+                {t(translations.footer.imprint, locale)}
+              </Link>
+              <Link
+                href="/datenschutz"
+                className="text-cream/40 hover:text-flame transition-colors duration-200 text-xs uppercase tracking-widest cursor-pointer"
+              >
+                {t(translations.footer.privacy, locale)}
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

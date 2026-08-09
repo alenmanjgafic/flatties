@@ -45,6 +45,13 @@ section {
 .font-display {
   font-family: var(--font-display), "Arial Narrow", sans-serif;
 }
+
+/* V4: Zwischenüberschriften der Rechtsseiten — .font-display ist eine
+   handgeschriebene Klasse (keine Tailwind-Utility) und darum als
+   [&_h2]-Variante nicht verfügbar. */
+.v4-legal h2 {
+  font-family: var(--font-display), "Arial Narrow", sans-serif;
+}
 .font-bubble {
   font-family: var(--font-bubble), sans-serif;
 }

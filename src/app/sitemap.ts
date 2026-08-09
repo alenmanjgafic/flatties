@@ -12,5 +12,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.5,
     },
+    {
+      url: "https://flatties.ch/impressum",
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      url: "https://flatties.ch/datenschutz",
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
   ];
 }
