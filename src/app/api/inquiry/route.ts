@@ -21,6 +21,43 @@ const TYPE_LABELS: Record<string, string> = {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
+// Formular-Mindestausfüllzeit: schneller schafft es nur ein Bot.
+const MIN_FORM_AGE_MS = 3000;
+
+// Rate-Limit pro IP, in-memory. Auf Serverless gilt das nur pro warmer
+// Instanz — als Burst-Bremse reicht das, echte Nutzer erreichen das Limit nie.
+const RATE_WINDOW_MS = 10 * 60_000;
+const RATE_MAX = 5;
+const rateLog = new Map<string, number[]>();
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const hits = (rateLog.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  hits.push(now);
+  rateLog.set(ip, hits);
+  if (rateLog.size > 10_000) {
+    for (const [key, times] of rateLog) {
+      if (times.every((t) => now - t >= RATE_WINDOW_MS)) rateLog.delete(key);
+    }
+  }
+  return hits.length > RATE_MAX;
+}
+
+// Nur Anfragen von der eigenen Seite: Browser senden bei fetch-POSTs immer
+// einen Origin-Header; er muss zum angefragten Host passen (wie bei Next.js
+// Server Actions). Direkte Skript-Aufrufe ohne Origin fliegen ebenfalls raus.
+function isSameOrigin(request: Request): boolean {
+  const origin = request.headers.get("origin");
+  if (!origin) return false;
+  const host =
+    request.headers.get("x-forwarded-host") ?? request.headers.get("host");
+  try {
+    return host !== null && new URL(origin).host === host.split(",")[0].trim();
+  } catch {
+    return false;
+  }
+}
+
 type Inquiry = {
   ts: string;
   name: string;
@@ -93,6 +130,17 @@ async function sendViaResend(entry: Inquiry): Promise<boolean> {
 }
 
 export async function POST(request: Request) {
+  if (!isSameOrigin(request)) {
+    return NextResponse.json({ error: "forbidden" }, { status: 403 });
+  }
+
+  const ip = (request.headers.get("x-forwarded-for") ?? "unknown")
+    .split(",")[0]
+    .trim();
+  if (isRateLimited(ip)) {
+    return NextResponse.json({ error: "too many requests" }, { status: 429 });
+  }
+
   let body: Record<string, unknown> = {};
   try {
     body = await request.json();
@@ -100,10 +148,16 @@ export async function POST(request: Request) {
     // fällt unten in die Validierung
   }
 
-  const { name, email, type, message, website } = body;
+  const { name, email, type, message, website, formAge } = body;
 
-  // Honeypot: echte Nutzer füllen das unsichtbare Feld nie aus
-  if (typeof website === "string" && website.trim()) {
+  // Honeypot und Zeitfalle: echte Nutzer füllen das unsichtbare Feld nie aus
+  // und brauchen länger als ein paar Sekunden. Bots bekommen ein stilles "ok",
+  // damit sie nichts zum Anpassen lernen.
+  if (
+    (typeof website === "string" && website.trim()) ||
+    typeof formAge !== "number" ||
+    formAge < MIN_FORM_AGE_MS
+  ) {
     return NextResponse.json({ ok: true });
   }
 

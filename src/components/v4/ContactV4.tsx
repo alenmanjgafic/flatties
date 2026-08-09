@@ -22,6 +22,9 @@ export default function ContactV4() {
   const [type, setType] = useState<string>(INQUIRY_TYPES[0].id);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
+  // Zeitfalle: der Server verwirft Anfragen, die schneller abgeschickt
+  // werden, als ein Mensch das Formular ausfüllen kann.
+  const [mountedAt] = useState(() => Date.now());
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -39,6 +42,7 @@ export default function ContactV4() {
           type,
           message: form.get("message"),
           website: form.get("website"),
+          formAge: Date.now() - mountedAt,
         }),
       });
       if (!res.ok) throw new Error(String(res.status));
