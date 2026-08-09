@@ -140,12 +140,19 @@ export const translations = {
   },
   footer: {
     rights: { en: "All rights reserved.", de: "Alle Rechte vorbehalten." },
+    imprint: { en: "Imprint", de: "Impressum" },
+    privacy: { en: "Privacy", de: "Datenschutz" },
   },
   reviews: {
     tagline: { en: "Google Reviews", de: "Google Rezensionen" },
     title: { en: "What Guests Say", de: "Das Sagen Gäste" },
     onGoogle: { en: "reviews on Google", de: "Rezensionen auf Google" },
     cta: { en: "Read all reviews", de: "Alle Rezensionen lesen" },
+  },
+  social: {
+    tagline: { en: "@flatties.ch on TikTok", de: "@flatties.ch auf TikTok" },
+    title: { en: "Fresh from the Feed", de: "Frisch aus dem Feed" },
+    cta: { en: "Follow on TikTok", de: "Auf TikTok folgen" },
   },
   contact: {
     navLabel: { en: "Contact", de: "Kontakt" },

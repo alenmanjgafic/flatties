@@ -1,6 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    // TikTok-Video-Thumbnails (oEmbed) liegen auf wechselnden CDN-Subdomains
+    remotePatterns: [
+      { protocol: "https", hostname: "**.tiktokcdn.com" },
+      { protocol: "https", hostname: "**.tiktokcdn-eu.com" },
+    ],
+  },
   async redirects() {
     // Alte Versions-URLs auf die Startseite umleiten
     return [
