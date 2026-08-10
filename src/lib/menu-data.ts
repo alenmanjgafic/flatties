@@ -33,7 +33,7 @@ export const menuData: MenuCategory[] = [
           "1x Smashburger (Martin's Potato Bun, Beef Smash, Cheddar, Pickles, Crispy Onions, Flatties Sauce), 1x Classic Fries incl. 1x Sauce, 1x Soft Drink",
           "1x Smashburger (Martin's Potato Bun, Rinder Smash, Cheddar, Essiggurken, Röstzwiebel, Flatties Sosse), 1x Klassische Pommes inkl. 1x Sosse, 1x Softdrink"
         ),
-        prices: chf("19.90"),
+        prices: chf("16.90"),
         image: "/images/menu/menu-classic.jpg",
         popular: true,
       },
@@ -43,7 +43,7 @@ export const menuData: MenuCategory[] = [
           "1x Smashburger (Martin's Potato Bun, Beef Smash, Cheddar, Pickles, Crispy Onions, Fresh Jalapeños, Chili Mayo), 1x Classic Fries incl. 1x Sauce, 1x Soft Drink",
           "1x Smashburger (Martin's Potato Bun, Rinder Smash, Cheddar, Essiggurken, Röstzwiebel, Frische Jalapenios, Chili Mayo), 1x Klassische Pommes inkl. 1x Sosse, 1x Softdrink"
         ),
-        prices: chf("20.90"),
+        prices: chf("17.90"),
         image: "/images/menu/menu-spicy.jpg",
         spicy: true,
       },
@@ -53,7 +53,7 @@ export const menuData: MenuCategory[] = [
           "1x Smashburger (Martin's Potato Bun, Beef Smash, Cheddar, Pickles, Crispy Onions, Truffle Sauce), 1x Classic Fries incl. 1x Sauce, 1x Soft Drink",
           "1x Smashburger (Martin's Potato Bun, Rinder Smash, Cheddar, Essiggurken, Röstzwiebel, Trüffel Sosse), 1x Klassische Pommes inkl. 1x Sosse, 1x Softdrink"
         ),
-        prices: chf("21.90"),
+        prices: chf("18.90"),
         image: "/images/menu/menu-truffle.jpg",
       },
       {
@@ -62,7 +62,7 @@ export const menuData: MenuCategory[] = [
           "1x Smashburger (Martin's Potato Bun, Beef Smash, Potato Rösti, Veal Bacon, Cheddar, Pickles, Crispy Onions, BBQ Mayo), 1x Classic Fries incl. 1x Sauce, 1x Soft Drink",
           "1x Smashburger (Martin's Potato Bun, Rinder Smash, Kartoffelrösti, Kalbs Bacon, Cheddar, Essiggurken, Röstzwiebel, BBQ Mayo), 1x Klassische Pommes inkl. 1x Sosse, 1x Softdrink"
         ),
-        prices: chf("22.90"),
+        prices: chf("19.90"),
         image: "/images/menu/menu-signature.jpg",
         popular: true,
       },
@@ -72,7 +72,7 @@ export const menuData: MenuCategory[] = [
           "1x Burger (Martin's Potato Bun, Crispy Chicken, Cheddar, Pickles, Coleslaw, Ranch Sauce, Pomegranate Sauce), 1x Classic Fries incl. 1x Sauce, 1x Soft Drink",
           "1x Burger (Martin's Potato Bun, Chrispy Chicken, Cheddar, Essiggurken, Coleslaw, Ranch Sosse, Granatapfel Sosse), 1x Klassische Pommes inkl. 1x Sosse, 1x Softdrink"
         ),
-        prices: chf("20.90"),
+        prices: chf("17.90"),
         image: "/images/menu/menu-crispy-chicken.jpg",
       },
       {
@@ -81,7 +81,7 @@ export const menuData: MenuCategory[] = [
           "1x Burger (Martin's Potato Bun, Crispy Soy Patty, Cheddar, Pickles, Coleslaw, Ranch Sauce, Pomegranate Sauce), 1x Classic Fries incl. 1x Sauce, 1x Soft Drink",
           "1x Burger (Martin's Potato Bun, Chrispy Soja Patty, Cheddar, Essiggurken, Coleslaw, Ranch Sosse, Granatapfel Sosse), 1x Klassische Pommes inkl. 1x Sosse, 1x Softdrink"
         ),
-        prices: chf("20.90"),
+        prices: chf("17.90"),
         image: "/images/menu/menu-vegi-crispy.jpg",
       },
     ],
@@ -96,7 +96,7 @@ export const menuData: MenuCategory[] = [
           "Martin's Potato Bun, Beef Smash, Cheddar, Pickles, Crispy Onions, Flatties Sauce",
           "Martin's Potato Bun, Rinder Smash, Cheddar, Essiggurken, Röstzwiebel, Flatties Sosse"
         ),
-        prices: chf("14.90"),
+        prices: chf("12.90"),
         image: "/images/menu/burger-classic.jpg",
         popular: true,
       },
@@ -106,7 +106,7 @@ export const menuData: MenuCategory[] = [
           "Martin's Potato Bun, Beef Smash, Cheddar, Pickles, Crispy Onions, Fresh Jalapeños, Chili Mayo",
           "Martin's Potato Bun, Rinder Smash, Cheddar, Essiggurken, Röstzwiebel, Frische Jalapenios, Chili Mayo"
         ),
-        prices: chf("15.90"),
+        prices: chf("13.90"),
         image: "/images/menu/burger-spicy.jpg",
         popular: true,
         spicy: true,
@@ -117,7 +117,7 @@ export const menuData: MenuCategory[] = [
           "Martin's Potato Bun, Beef Smash, Cheddar, Pickles, Crispy Onions, Truffle Sauce",
           "Martin's Potato Bun, Rinder Smash, Cheddar, Essiggurken, Röstzwiebel, Trüffel Sosse"
         ),
-        prices: chf("16.90"),
+        prices: chf("14.90"),
         image: "/images/menu/burger-truffle.jpg",
       },
       {
@@ -126,7 +126,7 @@ export const menuData: MenuCategory[] = [
           "Martin's Potato Bun, Beef Smash, Potato Rösti, Veal Bacon, Cheddar, Pickles, Crispy Onions, BBQ Mayo",
           "Martin's Potato Bun, Rinder Smash, Kartoffelrösti, Kalbs Bacon, Cheddar, Essiggurken, Röstzwiebel, BBQ Mayo"
         ),
-        prices: chf("17.90"),
+        prices: chf("15.90"),
         image: "/images/menu/burger-signature.jpg",
       },
       {
@@ -135,7 +135,7 @@ export const menuData: MenuCategory[] = [
           "Martin's Potato Bun, Crispy Chicken, Cheddar, Pickles, Coleslaw, Ranch Sauce, Pomegranate Sauce",
           "Martin's Potato Bun, Chrispy Chicken, Cheddar, Essiggurken, Coleslaw, Ranch Sosse, Granatapfel Sosse"
         ),
-        prices: chf("15.90"),
+        prices: chf("13.90"),
         image: "/images/menu/burger-crispy-chicken.jpg",
       },
       {
@@ -144,7 +144,7 @@ export const menuData: MenuCategory[] = [
           "Martin's Potato Bun, Crispy Soy Patty, Cheddar, Pickles, Coleslaw, Ranch Sauce, Pomegranate Sauce",
           "Martin's Potato Bun, Chrispy Soja Patty, Cheddar, Essiggurken, Coleslaw, Ranch Sosse, Granatapfel Sosse"
         ),
-        prices: chf("15.90"),
+        prices: chf("13.90"),
         image: "/images/menu/burger-vegi-crispy.jpg",
       },
     ],
@@ -156,46 +156,46 @@ export const menuData: MenuCategory[] = [
       {
         name: _("Classic Fries", "Klassische Pommes"),
         description: same(""),
-        prices: chf("9.90"),
+        prices: chf("7.90"),
         image: "/images/menu/side-fries.jpg",
       },
       {
         name: _("Sweet Potato Fries", "Süsskartoffel Pommes"),
         description: same(""),
-        prices: chf("10.90"),
+        prices: chf("9.90"),
         image: "/images/menu/side-sweet-fries.jpg",
         popular: true,
       },
       {
         name: _("Chicken Tenders Bites 6 Pcs", "Chicken Tenders Bites 6 Stück"),
         description: same(""),
-        prices: chf("10.90"),
+        prices: chf("9.90"),
         image: "/images/menu/side-tenders.jpg",
         popular: true,
       },
       {
         name: _("Spring Rolls Vegan 6 Pcs", "Frühlingsrollen Vegan 6 Stück"),
         description: same(""),
-        prices: chf("7.90"),
+        prices: chf("6.90"),
         image: "/images/menu/side-spring-rolls.jpg",
       },
       {
-        name: _("Crunchy Shrimps 5 Pcs", "Knusprige Garnelen 5 Stück"),
+        name: _("Crunchy Shrimps 5 Pcs", "Knusprige Crevetten 5 Stück"),
         description: same(""),
-        prices: chf("9.90"),
+        prices: chf("7.90"),
         image: "/images/menu/side-shrimps.jpg",
       },
       {
         name: _("Salty Edamame", "Salzige Edamame"),
         description: same(""),
-        prices: chf("7.90"),
+        prices: chf("6.90"),
         image: "/images/menu/side-edamame.jpg",
       },
       {
-        name: _("Cocktail Salad", "Cocktail Salat"),
+        name: _("Coleslaw Salad", "Coleslaw Salat"),
         description: same(""),
-        prices: chf("5.90"),
-        image: "/images/menu/side-cocktail-salad.jpg",
+        prices: chf("4.90"),
+        image: "/images/menu/side-coleslaw.jpg",
       },
     ],
   },
@@ -206,14 +206,23 @@ export const menuData: MenuCategory[] = [
       {
         name: same("Ketchup"),
         description: same(""),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-ketchup.jpg",
       },
       {
         name: same("Mayo"),
         description: same(""),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-mayo.jpg",
+      },
+      {
+        name: same("Chili Mayo"),
+        description: _(
+          "Creamy mayo with a gentle chili kick — the sauce from our Spicy burger.",
+          "Cremige Mayo mit angenehmem Chili-Kick — die Sosse aus unserem Spicy Burger."
+        ),
+        prices: chf("1.50"),
+        image: "/images/menu/dip-chili-mayo.jpg",
       },
       {
         name: _("Truffle Mayo", "Trüffel Mayo"),
@@ -221,7 +230,7 @@ export const menuData: MenuCategory[] = [
           "Creamy mayo with a fine truffle note — aromatic, elegant and perfect for dipping.",
           "Cremige Mayo mit feiner Trüffelnote, aromatisch & edel und perfekt zum Dippen."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-truffle-mayo.jpg",
         popular: true,
       },
@@ -231,7 +240,7 @@ export const menuData: MenuCategory[] = [
           "Our specially selected burger sauce — creamy, seasoned and the signature taste of Flatties.",
           "Unsere speziell ausgewählte Burgersosse, cremig & würzig und der Signature-Geschmack von Flatties."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-flatties.jpg",
       },
       {
@@ -240,7 +249,7 @@ export const menuData: MenuCategory[] = [
           "Creamy premium dip with balanced seasoning, a fine smoky note and a hint of sweetness — perfect for burgers, fries, chicken and snacks.",
           "Cremiger Premium-Dip mit ausgewogener Würze, feiner Rauchnote und leichter Süsse. Perfekt für Burger, Fries, Chicken & Snacks."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-snack.jpg",
         popular: true,
       },
@@ -250,7 +259,7 @@ export const menuData: MenuCategory[] = [
           "Smoky, seasoned sauce with fine chipotle heat and a bold Southwest character.",
           "Rauchig-würzige Sauce mit feiner Chipotle-Schärfe und kräftigem Southwest-Charakter."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-chipotle.jpg",
         popular: true,
       },
@@ -260,7 +269,7 @@ export const menuData: MenuCategory[] = [
           "White, creamy-smoky BBQ sauce with a distinctive smoke aroma and savoury depth.",
           "Weisse & cremig-rauchige BBQ-Sauce mit markantem Smoke-Aroma und würziger Tiefe."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-white-smoke-bbq.jpg",
       },
       {
@@ -269,7 +278,7 @@ export const menuData: MenuCategory[] = [
           "Extremely hot sauce with an intense kick — not for the faint of heart.",
           "Extrem scharfe Sauce mit intensivem Kick — nichts für schwache Nerven."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-fire-cracker.jpg",
         spicy: true,
       },
@@ -279,7 +288,7 @@ export const menuData: MenuCategory[] = [
           "Bold, intense sauce with deep umami flavour for extra savoury richness.",
           "Würzige & intensive Sauce mit tiefem Umami-Geschmack für extra herzhafte Aromatik."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-dirty-umami.jpg",
       },
       {
@@ -288,7 +297,7 @@ export const menuData: MenuCategory[] = [
           "Creamy ranch sauce with a fine herb note — fresh, mild and versatile.",
           "Cremige Ranch-Sosse mit fein-würziger Kräuternote, frisch & mild und vielseitig."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-ranch.jpg",
         popular: true,
       },
@@ -298,7 +307,7 @@ export const menuData: MenuCategory[] = [
           "Fruity, seasoned BBQ sauce with a Jamaican-inspired taste and an exotic note.",
           "Fruchtig-würzige BBQ-Sauce mit jamaikanisch inspiriertem Geschmack und exotischer Note."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-bbq-jamaica.jpg",
       },
       {
@@ -307,26 +316,8 @@ export const menuData: MenuCategory[] = [
           "Fruity sweet-and-sour sauce with balanced freshness — the perfect dipping classic.",
           "Fruchtig-süsssaure Sauce mit ausgewogener Frische & der perfekte Klassiker zum Dippen."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-sweet-sour.jpg",
-      },
-      {
-        name: _("Peanut Dip", "Erdnuss Dip"),
-        description: _(
-          "Creamy peanut dip with a fine nutty taste and a hint of sweetness.",
-          "Cremiger Erdnuss-Dip mit fein-nussigem Geschmack und leichter Süsse."
-        ),
-        prices: chf("2.00"),
-        image: "/images/menu/dip-peanut.jpg",
-      },
-      {
-        name: _("Roasted Sesame Sauce", "Roasted Sesam Sosse"),
-        description: _(
-          "Roasted sesame meets a creamy, seasoned sauce with a slightly nutty aroma for an intense, full-bodied dip.",
-          "Gerösteter Sesam trifft auf eine cremig-würzige Sauce mit leicht nussigem Aroma — intensiv & vollmundig bei jedem Dip."
-        ),
-        prices: chf("2.00"),
-        image: "/images/menu/dip-sesame.jpg",
       },
       {
         name: same("Smokey Chili Dip"),
@@ -334,14 +325,14 @@ export const menuData: MenuCategory[] = [
           "Smoky seasoning, pleasant chili heat and a creamy texture merge into a dip that adds depth and character to every bite.",
           "Rauchige Würze, angenehme Chili-Schärfe und eine cremige Konsistenz verschmelzen zu einem Dip, der jedem Bissen mehr Tiefe und Charakter verleiht."
         ),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-smokey-chili.jpg",
         spicy: true,
       },
       {
         name: same("Cocktail Sauce"),
         description: same(""),
-        prices: chf("2.00"),
+        prices: chf("1.50"),
         image: "/images/menu/dip-cocktail.jpg",
       },
     ],
@@ -351,15 +342,25 @@ export const menuData: MenuCategory[] = [
     titleKey: "drinks",
     items: [
       {
+        name: _("Grapos 0.3l Refill Cup", "Grapos 0.3l Nachfüll-Becher"),
+        description: _(
+          "Pay once, refill as much as you want — many flavours, ice-cold from the Swiss Grapos system.",
+          "Einmal zahlen, refill so viel du willst — viele Flavours, eiskalt aus dem Schweizer Grapos-System."
+        ),
+        prices: chf("3.50"),
+        image: "/images/menu/drink-grapos-cup.jpg",
+        popular: true,
+      },
+      {
         name: same("Red Bull Original 0.25l"),
         description: same(""),
-        prices: chf("4.90"),
+        prices: chf("3.90"),
         image: "/images/menu/drink-redbull.jpg",
       },
       {
         name: same("Red Bull Sugarfree 0.25l"),
         description: same(""),
-        prices: chf("4.90"),
+        prices: chf("3.90"),
         image: "/images/menu/drink-redbull-sugarfree.jpg",
       },
       {
@@ -371,52 +372,23 @@ export const menuData: MenuCategory[] = [
           "The Red Bull Peach Edition with the taste of white peach, a hint of citrus zest and delicate floral notes.",
           "Die Red Bull Peach Edition mit dem Geschmack von weissem Pfirsich, einem Hauch von Zitrusschale und zarten blumigen Noten."
         ),
-        prices: chf("4.90"),
+        prices: chf("3.90"),
         image: "/images/menu/drink-redbull-peach.jpg",
       },
       {
-        name: same("Coca Cola Original 0.33l"),
+        name: _(
+          "Red Bull The Apricot Edition — Apricot Strawberry",
+          "Red Bull The Apricot Edition — Aprikose Erdbeere"
+        ),
         description: same(""),
-        prices: chf("4.90"),
-        image: "/images/menu/drink-cola.jpg",
+        prices: chf("3.90"),
+        image: "/images/menu/drink-redbull-apricot.jpg",
       },
       {
-        name: same("Coca Cola Zero 0.33l"),
+        name: same("The Organics by Red Bull — Viva Mate"),
         description: same(""),
-        prices: chf("4.90"),
-        image: "/images/menu/drink-cola-zero.jpg",
-      },
-      {
-        name: same("Fanta Orange 0.33l"),
-        description: same(""),
-        prices: chf("4.90"),
-        image: "/images/menu/drink-fanta.jpg",
-        popular: true,
-      },
-      {
-        name: _("Fuse Tea Peach 0.33l", "Fuse Tea Pfirsich 0.33l"),
-        description: same(""),
-        prices: chf("4.90"),
-        image: "/images/menu/drink-fuse-peach.jpg",
-        popular: true,
-      },
-      {
-        name: _("Fuse Tea Lemon 0.33l", "Fuse Tea Zitrone 0.33l"),
-        description: same(""),
-        prices: chf("4.90"),
-        image: "/images/menu/drink-fuse-lemon.jpg",
-      },
-      {
-        name: same("Valser Still 0.5l"),
-        description: same(""),
-        prices: chf("4.50"),
-        image: "/images/menu/drink-valser-still.jpg",
-      },
-      {
-        name: _("Valser Sparkling 0.5l", "Valser Prickelnd 0.5l"),
-        description: same(""),
-        prices: chf("4.50"),
-        image: "/images/menu/drink-valser-sparkling.jpg",
+        prices: chf("3.90"),
+        image: "/images/menu/drink-redbull-organics-mate.jpg",
       },
     ],
   },
